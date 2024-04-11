@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import os
+import time
+from colorama import Fore, Style
+
+print()
+print(Fore.CYAN + Style.BRIGHT + "AutoFUZZ" + Style.RESET_ALL)
+time.sleep(0.5)
+print()
+
+
+url = input(Fore.YELLOW + "[+] Introduce la url a fuzzear: " + Style.RESET_ALL)
+time.sleep(0.5)
+os.system("clear")
+print()
+print(Fore.CYAN + "FUZZEANDO..." + Style.RESET_ALL)
+print()
+
+
+os.system(f"gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -u {url}")
+
+
+
+
+
+
